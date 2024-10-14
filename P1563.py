@@ -25,6 +25,10 @@ for i in range(n):
 # 创建字典，名字对应0或1
 for i in range(m):
     head, nums = input().split()
+    '''
+    精华 (set + len(persons)) % len(persons)
+    收尾链接,形成闭环
+    '''
     if outOrIn(people[persons[(set + len(persons)) % len(persons)]],int(head)):
         set -= int(nums)
     else:
